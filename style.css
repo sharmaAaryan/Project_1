@@ -1,3 +1,15 @@
+header {
+  display: block;
+}
+
+nav ul {
+  display: block;
+}
+
+section {
+  margin: 0;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -14,3 +26,16 @@ html{
 body {
   border: 5px solid red;
 }
+.skill-card:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+}
+.skill-badge:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
