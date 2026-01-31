@@ -11,7 +11,7 @@
   <!-- Tailwind CDN AFTER -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
    <header class="bg-gray-900 text-white">
   <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     
@@ -28,6 +28,7 @@
     </ul>
 
   </nav>
+  <main class="flex-grow">
 </header>
 
     <section id="home" class="bg-gray-100">
@@ -248,14 +249,53 @@
     </div>
   </div>
 </section>
-    <section id="Contact">
-        <h2>Contact Me</h2>
-        <p>Email: saaryan392@gmail.com</p>
-        <p>GitHub:githun@.com</p>
-        <p>LinkedIn: linkedIn/Aaryan.in</p>
-    </section>
-    <footer>
-        <p>2026 AaryanSharma. All right resserved .</p>
-    </footer>
+   <section id="contact" class="py-20 bg-gray-100">
+   </main>
+
+   <footer class="bg-gray-900 text-gray-300">
+
+
+  <div class="max-w-6xl mx-auto px-6 py-12">
+
+    <div class="grid gap-8 md:grid-cols-3">
+
+      <!-- Brand -->
+      <div>
+        <h3 class="text-2xl font-bold text-white">Aaryan Sharma</h3>
+        <p class="mt-3 text-sm text-gray-400">
+          Frontend Developer passionate about building clean and responsive web experiences.
+        </p>
+      </div>
+      
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#home" class="hover:text-white">Home</a></li>
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+        <ul class="space-y-2 text-sm">
+          <li>Email: saaryan392@gmail.com</li>
+          <li>GitHub: github.com</li>
+          <li>LinkedIn: linkedin/Aaryan.in</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+      © 2026 Aaryan Sharma. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>
