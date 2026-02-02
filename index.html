@@ -1,323 +1,153 @@
-<html class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aaryan Sharma | Portfolio</title>
 
-  <!-- External CSS FIRST -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/style.css">
 
-  <!-- Tailwind CDN AFTER -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./index.js"></script>
 </head>
-<body class="min-h-screen flex flex-col">
-   <header class="bg-gray-900 text-white">
+
+<body class="min-h-screen flex flex-col bg-white dark:bg-gray-900">
+
+<!-- ================= HEADER / NAVBAR ================= -->
+<header>
   <nav class="bg-white dark:bg-gray-900 shadow-md">
-  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
 
-    <h1 class="text-xl font-bold dark:text-white">
-      Aaryan
-    </h1>
+      <h1 class="text-xl font-bold text-gray-900 dark:text-white">
+        Aaryan
+      </h1>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-6 dark:text-white">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 text-gray-900 dark:text-white">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
 
-    <!-- Mobile Button -->
-    <button id="menuBtn" class="md:hidden text-2xl dark:text-white">
-      ☰
-    </button>
-  </div>
+      <!-- Right Buttons -->
+      <div class="flex items-center gap-3">
+        <button id="darkToggle"
+          class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+          🌙
+        </button>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu"
-    class="hidden md:hidden bg-white dark:bg-gray-900 px-6 py-4">
-    <a href="#home" class="block py-2">Home</a>
-    <a href="#about" class="block py-2">About</a>
-    <a href="#projects" class="block py-2">Projects</a>
-  </div>
-  <button id="darkToggle"
-  class="ml-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
-  🌙
-</button>
+        <button id="menuBtn" class="md:hidden text-2xl dark:text-white">
+          ☰
+        </button>
+      </div>
+    </div>
 
-</nav>
-
-  <main class="flex-grow">
-    <section class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden md:hidden bg-white dark:bg-gray-900 px-6 py-4">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#projects" class="block py-2">Projects</a>
+    </div>
+  </nav>
 </header>
 
-    <section id="home" class="bg-gray-100">
-  <div class="max-w-6xl mx-auto px-6 py-24 text-center">
-    
-    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+<!-- ================= MAIN CONTENT ================= -->
+<main class="flex-grow">
+
+<!-- HERO -->
+<section id="home" class="bg-gray-100 dark:bg-gray-800 py-24">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
       Hi, I'm Aaryan Sharma 👋
     </h2>
 
-    <p class="mt-4 text-lg text-gray-600">
+    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
       A passionate Full Stack Developer
     </p>
 
     <div class="mt-8 flex justify-center gap-4">
       <a href="#projects"
-         class="bg-gray-900 text-white px-6 py-3 rounded-lg btn-animate">
+         class="bg-gray-900 text-white px-6 py-3 rounded-lg">
         View Projects
       </a>
-
       <a href="#"
-         class="border border-gray-900 px-6 py-3 rounded-lg hover:bg-gray-900 hover:text-white transition">
+         class="border border-gray-900 dark:border-white px-6 py-3 rounded-lg">
         Download Resume
       </a>
     </div>
-
   </div>
 </section>
 
-    <section id="about" class="bg-gray-50 py-20">
-  <div class="max-w-6xl mx-auto px-6">
+<!-- ABOUT -->
+<section id="about" class="bg-gray-50 dark:bg-gray-900 py-20">
+  <div class="max-w-6xl mx-auto px-6 grid gap-10 md:grid-cols-2 items-center">
+    <img src="./assets/images/profile.jpg"
+         class="w-64 h-64 rounded-full mx-auto shadow-lg"
+         alt="Profile">
 
-    <!-- Section Title -->
-    <h2 class="text-3xl font-bold text-center text-gray-900">
-      About Me
-    </h2>
-
-    <!-- Content -->
-    <div class="mt-12 grid gap-10 md:grid-cols-2 items-center">
-
-      <!-- Left: Image -->
-      <div class="flex justify-center">
-        <img src="./assets/images/profile.jpg"
-             alt="Profile Photo"
-             class="w-64 h-64 rounded-full object-cover shadow-lg">
-      </div>
-
-      <!-- Right: Text -->
-      <div>
-        <h3 class="text-2xl font-semibold text-gray-800">
-          Hi, I'm Aaryan 👋
-        </h3>
-
-        <p class="mt-4 text-gray-600 leading-relaxed">
-          I am a passionate <span class="font-medium text-gray-900">Frontend Web Developer</span>
-          learning modern web technologies like HTML, CSS, Tailwind CSS, and JavaScript.
-          I enjoy building clean, responsive, and user-friendly interfaces.
-        </p>
-
-        <p class="mt-3 text-gray-600 leading-relaxed">
-          Currently, I am focusing on improving my skills by building real-world projects
-          and exploring the MERN stack step by step.
-        </p>
-
-        <!-- Skills -->
-        <div class="mt-6 flex flex-wrap gap-3">
-          <span class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm">HTML</span>
-          <span class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm">CSS</span>
-          <span class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm">Tailwind</span>
-          <span class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm">JavaScript</span>
-          <span class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm">Git & GitHub</span>
-        </div>
-
-        <!-- Button -->
-        <div class="mt-8">
-          <a href="#projects"
-             class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
-            View My Projects
-          </a>
-        </div>
-      </div>
-
+    <div>
+      <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
+        About Me
+      </h3>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">
+        Frontend developer learning modern technologies and building
+        real-world projects step by step.
+      </p>
     </div>
   </div>
 </section>
 
- <section id="skills" class="bg-gray-100 py-20">
-  <div class="max-w-6xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-center text-gray-900">
-      My Skills
-    </h2>
-
-    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
-
-      <!-- Skill Card -->
-      <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-        <h3 class="text-lg font-semibold">HTML</h3>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-        <h3 class="text-lg font-semibold">CSS</h3>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-        <h3 class="text-lg font-semibold">Tailwind CSS</h3>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-        <h3 class="text-lg font-semibold">JavaScript</h3>
-      </div>
-
-    </div>
-
-  </div>
+<!-- PROJECTS -->
+<section id="projects" class="bg-white dark:bg-gray-800 py-20">
+  <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white">
+    Projects
+  </h2>
 </section>
 
-  <section id="projects" class="bg-white py-20">
-  <div class="max-w-6xl mx-auto px-6">
+</main>
 
-    <!-- Section Title -->
-    <h2 class="text-3xl font-bold text-center text-gray-900">
-      Projects
-    </h2>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
 
-    <!-- Projects Grid -->
-    <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div>
+      <h3 class="text-2xl font-bold text-white">Aaryan Sharma</h3>
+      <p class="text-sm text-gray-400 mt-2">
+        Frontend Developer building clean & responsive websites.
+      </p>
+    </div>
 
-      <!-- Project Card 1 -->
-      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-        
-        <img src="./assets/images/project1.png"
-             alt="Portfolio Website"
-             class="w-full h-48 object-cover">
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
 
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900">
-            Portfolio Website
-          </h3>
-
-          <p class="mt-2 text-gray-600 text-sm">
-            Personal portfolio built using HTML, CSS, and Tailwind CSS.
-          </p>
-
-          <div class="mt-4 flex gap-4">
-            <a href="#"
-               class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
-              Live Demo
-            </a>
-
-            <a href="#"
-               class="border border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm hover:bg-gray-900 hover:text-white transition">
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Card 2 -->
-      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-        
-        <img src="./assets/images/project2.png"
-             alt="Landing Page"
-             class="w-full h-48 object-cover">
-
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900">
-            Landing Page
-          </h3>
-
-          <p class="mt-2 text-gray-600 text-sm">
-            Responsive landing page using Flexbox and Tailwind CSS.
-          </p>
-
-          <div class="mt-4 flex gap-4">
-            <a href="#"
-               class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
-              Live Demo
-            </a>
-
-            <a href="#"
-               class="border border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm hover:bg-gray-900 hover:text-white transition">
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Card 3 -->
-      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-        
-        <img src="./assets/images/project3.png"
-             alt="Mini JS Project"
-             class="w-full h-48 object-cover">
-
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900">
-            JavaScript Mini App
-          </h3>
-
-          <p class="mt-2 text-gray-600 text-sm">
-            Small JavaScript application to practice DOM manipulation.
-          </p>
-
-          <div class="mt-4 flex gap-4">
-            <a href="#"
-               class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
-              Live Demo
-            </a>
-
-            <a href="#"
-               class="border border-gray-900 text-gray-900 px-4 py-2 rounded-lg text-sm hover:bg-gray-900 hover:text-white transition">
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Contact</h4>
+      <p>Email: saaryan392@gmail.com</p>
+      <p>GitHub</p>
+      <p>LinkedIn</p>
     </div>
   </div>
-</section>
-   <section id="contact" class="py-20 bg-gray-100">
-   </main>
 
-   <footer class="bg-gray-900 text-gray-300">
-
-
-  <div class="max-w-6xl mx-auto px-6 py-12">
-
-    <div class="grid gap-8 md:grid-cols-3">
-
-      <!-- Brand -->
-      <div>
-        <h3 class="text-2xl font-bold text-white">Aaryan Sharma</h3>
-        <p class="mt-3 text-sm text-gray-400">
-          Frontend Developer passionate about building clean and responsive web experiences.
-        </p>
-      </div>
-      
-
-      <!-- Quick Links -->
-      <div>
-        <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#home" class="hover:text-white">Home</a></li>
-          <li><a href="#about" class="hover:text-white">About</a></li>
-          <li><a href="#projects" class="hover:text-white">Projects</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
-        <ul class="space-y-2 text-sm">
-          <li>Email: saaryan392@gmail.com</li>
-          <li>GitHub: github.com</li>
-          <li>LinkedIn: linkedin/Aaryan.in</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-  <span id="year"></span> Aaryan Sharma. All rights reserved.
-</div>
-</div>
+  <div class="text-center text-sm text-gray-400 border-t border-gray-700 py-4">
+    © <span id="year"></span> Aaryan Sharma
+  </div>
 </footer>
+
+<!-- Scroll Button -->
 <button id="scrollTop"
-  class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-4 py-2 rounded-full shadow-lg">
+  class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-4 py-2 rounded-full">
   ↑
 </button>
+
+<!-- JS AT END -->
+<script src="./index.js"></script>
 </body>
 </html>

@@ -1,47 +1,49 @@
-header {
-  display: block;
+html {
+  scroll-behavior: smooth;
 }
 
-nav ul {
-  display: block;
+/* Branding */
+.brand-text {
+  color: aqua;
 }
 
-section {
-  margin: 0;
+/* Hero background */
+.hero-bg {
+  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
 }
 
-html{
-    scroll-behavior: smooth;
-}
-.brand-text{
-    color: aqua;
-}
-.hero-bg{
-    background: linear-gradient(135deg,#f9fafb,#e5e7eb);
+/* Button hover animation */
+.btn-animate {
+  transition: all 0.2s ease;
 }
 .btn-animate:hover {
   transform: translateY(-2px);
-  transition: all 0.2s ease;
 }
-body {
-  border: 5px solid red;
+
+/* Cards hover */
+.skill-card,
+.project-card {
+  transition: all 0.3s ease;
 }
 .skill-card:hover {
   transform: translateY(-4px);
-  transition: all 0.3s ease;
 }
 .project-card:hover {
   transform: translateY(-6px);
-  transition: all 0.3s ease;
+}
+
+/* Skill badge */
+.skill-badge {
+  transition: transform 0.2s ease;
 }
 .skill-badge:hover {
   transform: scale(1.05);
-  transition: 0.2s;
 }
+
+/* Footer link underline animation */
 footer a {
   position: relative;
 }
-
 footer a::after {
   content: '';
   position: absolute;
@@ -52,18 +54,17 @@ footer a::after {
   background-color: white;
   transition: width 0.3s ease;
 }
-
 footer a:hover::after {
   width: 100%;
 }
+
+/* Footer reveal animation */
 footer {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.6s ease;
 }
-
 footer.show {
   opacity: 1;
   transform: translateY(0);
 }
-
