@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aaryan Sharma | Portfolio</title>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./css/style.css">
-
-
-  <!-- Tailwind -->
+  <!-- Tailwind (load first so utilities are available) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-  tailwind.config = {
-    darkMode: 'class'
-  }
-</script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- Custom CSS (after Tailwind so it can override utilities) -->
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
